@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    body
+    {
+      background-color: gainsboro;
+    }
+    .student-card
+    {
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: blanchedalmond;
+      color: black;
+      font-size: 20px;
+    }
+    .app-title
+    {
+      text-align: center;
+      color: black;
+    }
+    .list
+    {
+      background-color: white;
+      padding: 10px;
+      border-radius: 15px;
+      border: 5px double black;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="app-title">Student's List</h1>
+
+  <div class="list" id="list">
+
+  </div>
+
+  <script>
+    const students = ["Anand","Ankit", "Akshay", "Abhijeet", "Abhishek", "Anant", "Anshul", "Aman", "Abhimanyu", "Ankur"]
+
+    const listElement = document.getElementById('list')
+
+    for(let i=0; i<students.length; i++)
+    {
+      listElement.innerHTML +=
+       `
+        <div class='student-card'>
+             Hello ${students[i]}
+        </div>
+       `
+    }
+  </script>
+  
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Array With Loop</title>
+  <style>
+    .student-card
+    {
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: blueviolet;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const students = ["Achal","Kunal", "Kaveri", "Shanzey", "Suyash", "Vrushali", "Swapnali", "Yash", "Komal", "Urmila"]
+
+    for(let i=0; i<students.length; i++)
+    {
+      document.write(
+       ` <div class='student-card'>
+        Hello ${students[i]}
+      </div>`
+      )
+    }
+  </script>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>onmouseout</title>
+  </head>
+  <body>
+    <img src="pizza.png" onmouseout="imageOut()" height="200"/>
+    <script>
+        function imageOut(){
+            console.log("Image Out")
+        }
+    </script>
+  </body>
+</html> -->
