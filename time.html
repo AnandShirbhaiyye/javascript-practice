@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Set Interval And Date</title>
+    <style>
+      .date-count {
+        background-color: black;
+        width: 200px;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="card p-5 ms-auto me-auto m-5 shadow-lg">
+            <h2 class="text-center">Timer clock🕰️</h2>
+            <div class="card shadow-sm mt-4 ms-auto me-auto p-5">
+                <div class=" card date-count ms-auto me-auto mt-5">
+                    <span id="h">HH</span>:<span id="m">MM</span>:<span id="s">SS</span>
+                  </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <script>
+      function SayHello() {
+        console.log("Hello Anand");
+      }
+      setInterval(SayHello, 1000);
+
+      function displayTime() {
+        const date = new Date();
+
+        const h = document.getElementById("h");
+        h.innerHTML = date.getHours();
+
+        const m = document.getElementById("m");
+        m.innerHTML = date.getMinutes();
+
+        const s = document.getElementById("s");
+        s.innerHTML = date.getSeconds();
+      }
+
+      setInterval(displayTime, 1000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
